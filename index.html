@@ -641,6 +641,80 @@
       letter-spacing: 0.1em;
     }
 
+    /* ── Team Section ────────────────────────────────────────── */
+    #team {
+      padding: 5rem 3rem;
+      border-top: 1px solid var(--border);
+    }
+    .team-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3.5rem;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .team-left { flex: 1; min-width: 260px; }
+    .team-mentor {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+    .team-mentor-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 300;
+      color: var(--gold);
+      margin-bottom: 2rem;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      flex: 2;
+      min-width: 300px;
+    }
+    .team-member {
+      background: var(--card);
+      padding: 1.1rem 1.25rem;
+    }
+    .team-member-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
+    .team-member-dept {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cyan);
+    }
+    .docs-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 0.75rem 1.2rem;
+      text-decoration: none;
+      margin-top: 1.75rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .docs-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .docs-btn svg { flex-shrink: 0; }
+
     /* ── Reveal animation ──────────────────────────────────── */
     .reveal {
       opacity: 0;
@@ -652,7 +726,7 @@
     /* ── Responsive ────────────────────────────────────────── */
     @media (max-width: 800px) {
       nav { padding: 1rem 1.25rem; }
-      #how, #pricing { padding: 5rem 1.25rem; }
+      #how, #pricing, #team { padding: 4rem 1.25rem; }
       .inner { padding: 0 1.25rem; }
       .pricing-grid { grid-template-columns: 1fr; }
       .stat-item { padding: 1.5rem 1.25rem; }
@@ -663,6 +737,7 @@
       .orbit-ring-2 { width: 480px; height: 480px; }
       .reserve-meta { gap: 1.5rem; }
       .reserve-meta-divider { display: none; }
+      .team-inner { gap: 2rem; }
     }
   </style>
 </head>
@@ -884,6 +959,47 @@
         <div class="reserve-meta-item">
           <div class="reserve-meta-num">Al-Ula</div>
           <div class="reserve-meta-label">Primary Site</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team & Docs -->
+  <section id="team">
+    <div class="team-inner">
+      <div class="team-left reveal">
+        <div class="team-mentor">Mentor</div>
+        <div class="team-mentor-name">Saleh Alwahaishi</div>
+        <div class="section-label" style="margin-bottom:0.5rem">The Team</div>
+        <p style="font-size:0.82rem;color:var(--muted);font-weight:300;line-height:1.7;max-width:260px;">KFUPM BUS 200 · Section 4 · Team 6 · 2026</p>
+        <a href="https://drive.google.com/drive/folders/1gXU9cLdtDR0wyH_V6Ue_5vyFS-08Kuh1"
+           target="_blank" rel="noopener" class="docs-btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="12" x2="12" y2="18"/><line x1="9" y1="15" x2="15" y2="15"/>
+          </svg>
+          Pitch Deck &amp; Financials
+        </a>
+      </div>
+      <div class="team-grid reveal">
+        <div class="team-member">
+          <div class="team-member-name">Abdullah Kurdi</div>
+          <div class="team-member-dept">CHE · CEO</div>
+        </div>
+        <div class="team-member">
+          <div class="team-member-name">Faisal Alhabib</div>
+          <div class="team-member-dept">ME · COO</div>
+        </div>
+        <div class="team-member">
+          <div class="team-member-name">Mohammed Alharbi</div>
+          <div class="team-member-dept">CHE · CTO</div>
+        </div>
+        <div class="team-member">
+          <div class="team-member-name">Bassim Aldrewish</div>
+          <div class="team-member-dept">AE · CMO</div>
+        </div>
+        <div class="team-member">
+          <div class="team-member-name">Hassan Alhashim</div>
+          <div class="team-member-dept">EEPH · CFO</div>
         </div>
       </div>
     </div>
